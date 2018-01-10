@@ -1,8 +1,7 @@
 /*********************************
  * Steven Ortiz
- * ECGR 3090 Data Structure 
- * Homework 5 
- * the program checks if the brackets are balanced 
+ * The program returns true or flase if the given string type brackets are balanced. The real world application 
+ * is seen in arithmetic expressions. 
  * *******************************/
 
 
@@ -67,9 +66,10 @@ bool parenMatch(string expression)
 	 * 
 	 * Iterirate through the string until the end of string 
 	 *if it's an open bracket push the stack
-	 * if it's a close bracket then compare to the top bracket in stack to see if its a pair ( helper function) 
-	 * when close bracket has a pair pop the top of the stack then continue throught the array and competle until end of string 
-	 * 
+	 * if it's a close bracket then compare to the top bracket in stack to see 
+	 * if its a pair ( helper function) 
+	 * when close bracket has a pair pop the top of the stack then continue 
+	 * throught the array and competle until end of string 
 	 * ********************/
 	for(int i=0;i < expression.size(); i++)
 	{	
@@ -86,7 +86,6 @@ bool parenMatch(string expression)
 		{   // get into the checking if any close bracket has a matching pair with bracketmatch helper function 
 			if(bracketmatch(Stac.top(),expression[i]))           // if brackets match  pop 
 				{Stac.pop();
-					//cout << "bad" << endl;
 				}
 			else      // if the pair does not match 
 				return false; 
